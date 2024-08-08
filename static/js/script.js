@@ -79,5 +79,9 @@ function clearInputFields() {
 
     buttons.forEach(button => {
         button.disabled = false
+        button.classList.add('is-primary');
+        button.classList.remove('is-danger');
+        button.classList.remove('is-success');
+        button.innerText = 'Check'; 
     });
 }
