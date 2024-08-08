@@ -10,7 +10,7 @@ def get_db_connection():
     return conn
 
 # Route to display the form
-@app.route("/addword", methods=['GET', 'POST'])
+@app.route("/update", methods=['GET', 'POST'])
 def add_word():
     if request.method == 'POST':
         japanese_word = request.form['japanese_word']

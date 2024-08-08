@@ -3,3 +3,13 @@
     margin: 0 33vw;
     margin-top: 10px;
 }
+.bottom-right {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 1rem; /* Optional: Add some space from the edges */
+  }
+  #b-box {
+    position: fixed; /* Make sure the container has relative positioning */
+    min-height: 100vh; /* Optional: Ensure the container covers the viewport height */
+  }

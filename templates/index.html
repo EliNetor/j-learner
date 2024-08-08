@@ -15,21 +15,30 @@
         </div>
     </div>
 
-    <div class="container block">
-        <div>
-            Choose the language you want to translate
-        </div>
-        <div class="control">
-            <label class="radio">
-              <input type="radio" name="language" value="japanese" checked />
-              Japanese
-            </label>
-            <label class="radio">
-              <input type="radio" name="language" value="dutch" />
-              Dutch
-            </label>
+    <div class="container is-block">
+        <div class="columns">
+            <!-- First Column: Language Selection -->
+            <div class="column is-inline">
+                <div>
+                    Choose the language you want to translate
+                </div>
+                <div class="control">
+                    <label class="radio">
+                      <input type="radio" name="language" value="japanese" checked />
+                      Japanese
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="language" value="dutch" />
+                      Dutch
+                    </label>
+                </div>
+            </div>
+            
+            <!-- Second Column: Submit Form -->
+            
         </div>
     </div>
+    
 
     <div class="container" id="word-container">
         {% for word, translation in words %}
@@ -43,5 +52,14 @@
         </div>
         {% endfor %}
     </div>
+
+    <div class="container" id="b-box">
+        <!-- Your content here -->
+        <div class="bottom-right notification is-primary">           
+                <form action="{{ url_for('add_word') }}" >
+                    <input type="submit" value="Update word list" class="button is-primary"/>
+                </form>
+        </div>
+      </div>
 </body>
 </html>
