@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS words (
 )
 ''')
 
-add_word("こんにちは", "hallo")
+#add_word("こんにちは", "hallo")
 
 cursor.execute('SELECT japanese_word, translation FROM words')
 all_words = cursor.fetchall()

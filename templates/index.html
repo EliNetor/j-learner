@@ -14,11 +14,14 @@
         </div>
     </div>
     
-    <ul>
+    <div class="container">
         {% for word, translation in words %}
-            <li>{{ word }}: {{ translation }}</li>
+        <div class="columns">
+            <div class="column is-half has-background-danger has-text-right has-text-link-dark">{{ word }}</div>
+            <div class="column is-half">{{ translation }}</div>
+        </div>
         {% endfor %}
-    </ul>
+    </div>
 
 </body>
 </html>
