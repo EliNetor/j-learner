@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <title>Document</title>
+    <title>Word Learner</title>
     <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
 </head>
 <body>
@@ -14,7 +14,24 @@
             Wordcards
         </div>
     </div>
+
+    <div class="container block">
+        <div>
+            Choose the language you want to translate
+        </div>
+        <div class="control">
+            <label class="radio">
+              <input type="radio" name="foobar" checked/>
+              Japanese
+            </label>
+            <label class="radio">
+              <input type="radio" name="foobar" />
+              Dutch
+            </label>
+          </div>
+    </div>
     
+
     <div class="container">
         {% for word, translation in words %}
         <div class="columns">
