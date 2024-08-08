@@ -21,21 +21,20 @@
         </div>
         <div class="control">
             <label class="radio">
-              <input type="radio" name="foobar" checked/>
+              <input type="radio" name="language" value="japanese" checked />
               Japanese
             </label>
             <label class="radio">
-              <input type="radio" name="foobar" />
+              <input type="radio" name="language" value="dutch" />
               Dutch
             </label>
-          </div>
+        </div>
     </div>
-    
 
-    <div class="container">
+    <div class="container" id="word-container">
         {% for word, translation in words %}
         <div class="columns">
-            <div class="column is-half has-background-danger has-text-right has-text-link-dark japanese-word">{{ word }}</div>
+            <div class="column is-half has-background-danger has-text-right has-text-link-dark word" data-word="{{ word }}" data-translation="{{ translation }}">{{ word }}</div>
             <div class="column is-half field is-grouped">
                 <input type="text" class="translation-input input" placeholder="Info input">
                 <button onclick="checkTranslation(this)" class="button is-primary">Check</button>
