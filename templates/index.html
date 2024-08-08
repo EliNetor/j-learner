@@ -18,9 +18,9 @@
     <div class="container">
         {% for word, translation in words %}
         <div class="columns">
-            <div class="column is-half has-background-danger has-text-right has-text-link-dark">{{ word }}</div>
-            <div class="column is-half">
-                <input type="text" class="translation-input" placeholder="Enter translation">
+            <div class="column is-half has-background-danger has-text-right has-text-link-dark japanese-word">{{ word }}</div>
+            <div class="column is-half field is-grouped">
+                <input type="text" class="translation-input input" placeholder="Info input">
                 <button onclick="checkTranslation(this)" class="button is-primary">Check</button>
                 <span class="translation" style="display: none;">{{ translation }}</span>
             </div>
