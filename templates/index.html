@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <title>Document</title>
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
 </head>
 <body>
-    <div class="block has-background-primary tittel">
+    <div class="block has-background-primary title">
         <div class="has-text-centered has-text-primary-dark title is-1">
-          Wordcards
+            Wordcards
         </div>
     </div>
     
@@ -18,10 +19,13 @@
         {% for word, translation in words %}
         <div class="columns">
             <div class="column is-half has-background-danger has-text-right has-text-link-dark">{{ word }}</div>
-            <div class="column is-half">{{ translation }}</div>
+            <div class="column is-half">
+                <input type="text" class="translation-input" placeholder="Enter translation">
+                <button onclick="checkTranslation(this)" class="button is-primary">Check</button>
+                <span class="translation" style="display: none;">{{ translation }}</span>
+            </div>
         </div>
         {% endfor %}
     </div>
-
 </body>
 </html>
